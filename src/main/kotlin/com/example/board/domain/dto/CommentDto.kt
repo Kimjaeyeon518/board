@@ -6,8 +6,8 @@ import java.time.LocalDateTime
 data class CommentDto(
     var commentId: Long? = null,
     var boardId: Long? = null,
-    var writer: String,
-    var content: String
+    var writer: String? = null,
+    var content: String? = null
 ) {
     lateinit var createdAt: LocalDateTime
     lateinit var updatedAt: LocalDateTime

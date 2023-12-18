@@ -6,7 +6,7 @@ import java.time.LocalDateTime
 data class BoardDto(
     var boardId: Long? = null,
     var title: String,
-    var writer: String,
+    var writer: String? = null,
     var content: String,
     var comments: List<CommentDto>? = null
 ) {

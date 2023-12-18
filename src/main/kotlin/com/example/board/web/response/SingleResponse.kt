@@ -16,16 +16,20 @@ data class SingleResponse<T>(
             return SingleResponse(code, message, data)
         }
 
-        fun <T> of(code: String?, message: String?): SingleResponse<T> {
-            return of(code, message, null)
-        }
-
         fun <T> successOf(data: T): SingleResponse<T> {
             return of("S001", "성공", data)
         }
 
+        fun <T> successOf(message: String, data: T): SingleResponse<T> {
+            return of("S001", message, data)
+        }
+
         fun <T> success(): SingleResponse<T> {
             return of("S001", "성공", null)
+        }
+
+        fun <T> success(message: String): SingleResponse<T> {
+            return of("S001", message, null)
         }
 
         fun <T> failOf(data: T): SingleResponse<T> {
