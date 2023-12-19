@@ -30,13 +30,4 @@ class JwtInterceptor: HandlerInterceptor {
             throw NotFoundException("404 Error")
         }
     }
-
-    override fun postHandle(
-        request: HttpServletRequest,
-        response: HttpServletResponse,
-        handler: Any,
-        modelAndView: ModelAndView?
-    ) {
-        super.postHandle(request, response, handler, modelAndView)
-    }
 }

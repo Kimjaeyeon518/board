@@ -10,8 +10,6 @@ data class BoardUpdateRequest(
     val boardId: Long?,
     @field:NotBlank(message = "게시글 제목은 필수입니다.")
     val title: String,
-//    @field:NotBlank(message = "게시글 작성자 이름은 필수입니다.")
-//    val writer: String,
     @field:NotBlank(message = "게시글 본문은 필수입니다.")
     val content: String,
 ) {
@@ -19,7 +17,6 @@ data class BoardUpdateRequest(
         return BoardDto(
             boardId = boardId,
             title = title,
-//            writer = writer,
             content = content
         )
     }
